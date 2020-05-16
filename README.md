@@ -1,4 +1,4 @@
-# NodeServer
+#
 Steps to do in Terminal
 - Npx gitignore node (generates a gitignore file)
 - Npm init -y ( generates package.json)
