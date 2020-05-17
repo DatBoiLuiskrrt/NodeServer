@@ -4,6 +4,7 @@ const shortid = require('shortid');
 const server = express(); // npm i shortid
 
 let hubs = [];
+let ingredients = [];
 
 server.use(express.json()); // add this line
 
@@ -20,6 +21,14 @@ server.post("/api/hubs", (req,res) => {
     hubInfo.id = shortid.generate();
     hubs.push(hubInfo);
     res.status(201).json(hubInfo);
+});
+server.post("/api/buildyourpizza", (req,res) => {
+    const pizzaIngredients = req.body;
+
+    pizzaIngredients.id = shortid.generate();
+    ingredients.push(pizzaIngredients);
+    res.status(201).json(pizzaIngredients);
+
 });
 
 //creater lessons
